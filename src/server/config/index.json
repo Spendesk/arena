@@ -7,5 +7,11 @@
       "hostId": "AWS Server 2"
     }
   ],
-  "queues": []
+  "queues": [
+    {
+      "name": "fetcherCompanies",
+      "hostId": "Wttj",
+      "url": "redis://h:p020f0992c130d211ac1f61922f84fba72da7d9005c1c6431e7fd8327f93ebe3a@ec2-3-248-67-117.eu-west-1.compute.amazonaws.com:32309"
+    }
+  ]
 }
