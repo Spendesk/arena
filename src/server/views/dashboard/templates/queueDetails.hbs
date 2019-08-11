@@ -51,7 +51,13 @@
 {{/contentFor}}
 
 {{#contentFor 'script'}}
-  window.jsonEditor = new JSONEditor(document.getElementById('jsoneditor'), {});
+  window.jsonEditor = new JSONEditor(
+    document.getElementById('jsoneditor'),
+    {
+      mode: 'code',
+      modes: ['code', 'tree']
+    }
+  );
   window.arenaInitialPayload = {
     queueHost: "{{ queueHost }}",
     queueName: "{{ queueName }}"
