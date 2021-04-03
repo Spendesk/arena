@@ -21,7 +21,11 @@ class Queues {
   }
 
   list() {
-    return this._config.queues;
+    if (this._config.queues) {
+      return this._config.queues;
+    }
+
+    return this._config.getQueues();
   }
 
   setConfig(config) {
@@ -29,7 +33,7 @@ class Queues {
   }
 
   async get(queueName, queueHost) {
-    const queueConfig = _.find(this._config.queues, {
+    const queueConfig = _.find(this.list(), {
       name: queueName,
       hostId: queueHost
     });
